@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class FinanceApp {
-    private HashMap<String, Double> exchangeRates;
+    private final HashMap<String, Double> exchangeRates;
 
     public FinanceApp() {
         this.exchangeRates = new HashMap<>();
@@ -55,7 +55,6 @@ public class FinanceApp {
         }
         System.out.println("Доступные валюты:");
         System.out.println("Рубль - RUB; Доллар США - USD; Евро - EUR; Китайский юань - CNY; Японская йена - JPY");
-        boolean isCorrect = false;
         System.out.println("Введите валюту из которой хотите произвести конвертацию в формате FFF:");
         String valueFrom = scanner.nextLine();
         System.out.println("Введите сумму для конвертации:");
