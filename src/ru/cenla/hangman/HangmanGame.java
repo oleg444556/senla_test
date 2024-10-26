@@ -8,12 +8,12 @@ import java.util.TreeSet;
 public class HangmanGame {
     private static final String[] WORDS = {"УЛИЦА", "КОМПЬЮТЕР", "ИГРОК", "ЭКРАН",
             "МОНЕТА", "ОБЛАКО", "МАШИНА", "РАКЕТА", "АЗБУКА"};
-    private static final int MAX_LIFES = 6;
+    private static final int MAX_LIVES = 6;
     private final String wordToGuess;
     private final char[] currentWord;
     private boolean isCompleted;
     private final Set<Character> remainingLetters = new TreeSet<>();
-    private int lives = MAX_LIFES;
+    private int lives = MAX_LIVES;
 
     public HangmanGame() {
         Random random = new Random();
@@ -61,7 +61,7 @@ public class HangmanGame {
 
     private void printMessage() {
         System.out.println("Оставшиеся буквы:");
-        System.out.println(this.remainingLetters.toString());
+        System.out.println(this.remainingLetters);
         System.out.println("Текущее слово:");
         System.out.println(new String(this.currentWord));
         System.out.println("Осталось жизней:");
